@@ -1,0 +1,21 @@
+{
+    "name": "spengembang/idnpg-espay",
+    "description": "this package is for handling indonesian payment gateway named espay",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sang Pengembang",
+            "email": "sinaunengweb@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "spengembang\\Espay\\": "src/"
+        }
+    }
+}
