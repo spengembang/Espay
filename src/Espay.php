@@ -41,6 +41,6 @@ class Espay
     public function genReconsileID($member_id, $order_id)
     {
         $reconsile_id = trim($member_id . " - " . $order_id . date('YmdHis'));
-        return $reconsile_id;a
+        return $reconsile_id;
     }
 }
