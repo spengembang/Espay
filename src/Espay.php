@@ -23,10 +23,24 @@ class Espay
      *
      * @return String $signature
      */
-    public function genSignature($key, $req_Datetime, $order_id, $mode){
+    public function genSignature($key, $req_datetime, $order_id, $mode){
         // $key = env('ESPAY_KEY');
-        $data = "##".$key."##".$req_Datetime."##".$order_id."##".$mode."##";
+        $data = "##".$key."##".$req_datetime."##".$order_id."##".$mode."##";
         $signature = hash('sha256', strtoupper($data));
         return $signature;
     } 
+
+    /**
+     * genReconsileID
+     *
+     * @param  String $member_id
+     * @param  String $order_id
+     *
+     * @return String
+     */
+    public function genReconsileID($member_id, $order_id)
+    {
+        $reconsile_id = trim($member_id . " - " . $order_id . date('YmdHis'));
+        return $reconsile_id;a
+    }
 }
