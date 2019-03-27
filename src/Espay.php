@@ -13,8 +13,20 @@ namespace spengembang\Espay;
 
 class Espay
 {
-    public function Inquiry($toSay = "Nothing given")
-    {
-        return $toSay;
-    }
+    /**
+     * genSignature
+     *
+     * @param  String $key
+     * @param  DateTime $req_Datetime
+     * @param  String $order_id
+     * @param  String $mode
+     *
+     * @return String $signature
+     */
+    public function genSignature($key, $req_Datetime, $order_id, $mode){
+        // $key = env('ESPAY_KEY');
+        $data = "##".$key."##".$req_Datetime."##".$order_id."##".$mode."##";
+        $signature = hash('sha256', strtoupper($data));
+        return $signature;
+    } 
 }
