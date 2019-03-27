@@ -1,6 +1,8 @@
-# Espay
-Indonesian Payment Gateway ESPAY
-This package is for my project and not represent any official of respected party.
-Any help and Anyone can joined would be appreciated.
+# **Espay**
+# **Indonesian** *Payment Gateway* **ESPAY**
+This package is for my personal projects 
+and not represent any officials or respected party.
 
-Thanks
+Any contribution from Anyone would be very appreciated.
+
+*Thanks*
